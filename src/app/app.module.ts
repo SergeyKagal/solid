@@ -7,6 +7,7 @@ import { SummaryPageComponent } from './components/summary-page/summary-page.com
 import { NavigatorComponent } from './components/navigator/navigator.component';
 import { HeaderComponent } from './components/header/header.component';
 import { routes } from 'src/data/routes';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,12 @@ import { routes } from 'src/data/routes';
     NavigatorComponent,
     HeaderComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
