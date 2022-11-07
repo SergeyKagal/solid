@@ -5,10 +5,8 @@ export enum transactionTypes {
   investment,
 }
 
-type TransactionTypes = number;
-
 export interface ITransaction {
-  type: TransactionTypes;
+  type: 'income' | 'outcome' | 'loan' | 'investment';
   _id: string;
   amount: number;
   name: {

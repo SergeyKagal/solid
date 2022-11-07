@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { HttpService } from '../../../http.service';
 import { ITransaction } from 'src/types';
 
@@ -12,13 +11,19 @@ import { ITransaction } from 'src/types';
 export class NavigatorComponent implements OnInit {
   transactions: ITransaction[] = [];
 
-  constructor(
-    private route: ActivatedRoute,
-    private httpService: HttpService
-  ) {}
+  constructor(private httpService: HttpService) {}
 
   ngOnInit(): void {
-    console.log(this.route.queryParams);
-    this.httpService.getData().subscribe({ next: (x) => console.log(x) });
+    this.httpService.getData().subscribe({
+      next: (responce) => {
+        this.transactions = responce.map((transaction) => ({
+          ...transaction,
+          amount: Math.round(
+            Math.random() * 100 * 10 ** Math.round(Math.random() * 7)
+          ),
+        }));
+        console.log(this.transactions);
+      },
+    });
   }
 }
