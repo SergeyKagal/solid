@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../../http.service';
-import { ITransaction } from 'src/types';
+import { ITransaction } from 'src/types/types';
 
 @Component({
   selector: 'app-navigator',

@@ -2,13 +2,15 @@
   <div class="container-fluid justify-content-md-between">
     <div class="navbar-brand">Entry test</div>
     <ul class="navbar-nav nav">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="navigator" [queryParams]="{ tab: 0 }"
-          >Navigator</a
+      <li *ngFor="let link of links" class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="link.path"
+          [queryParams]="link.param"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >{{ link.title }}</a
         >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/">Summary page</a>
       </li>
     </ul>
   </div>
