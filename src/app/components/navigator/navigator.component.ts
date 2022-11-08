@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../../http.service';
-import { ITransaction } from 'src/types/types';
+import { ITransaction } from 'src/types/transaction';
+import { ILink } from 'src/types/link';
+import { navigatorLinks } from 'src/data/links';
 
 @Component({
   selector: 'app-navigator',
@@ -10,6 +12,7 @@ import { ITransaction } from 'src/types/types';
 })
 export class NavigatorComponent implements OnInit {
   transactions: ITransaction[] = [];
+  navigatorLinks: ILink[] = navigatorLinks;
 
   constructor(private httpService: HttpService) {}
 

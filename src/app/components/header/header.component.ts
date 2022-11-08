@@ -1,5 +1,5 @@
 import { Component, DoCheck } from '@angular/core';
-import { links } from 'src/data/links';
+import { headerLinks } from 'src/data/links';
 import { ILink } from 'src/types/link';
 
 @Component({
@@ -8,5 +8,5 @@ import { ILink } from 'src/types/link';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  links: ILink[] = links;
+  links: ILink[] = headerLinks;
 }

@@ -1,3 +1,14 @@
-<div class="navigator">
-  <h2>navigator</h2>
+<div class="navigator container-fluid text-center p-2 bg-light border">
+  <ul class="nav nav-tabs">
+    <li *ngFor="let link of navigatorLinks" class="nav-item">
+      <a
+        class="nav-link"
+        [routerLink]="link.path"
+        [queryParams]="link.param"
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >{{ link.title }}</a
+      >
+    </li>
+  </ul>
 </div>
