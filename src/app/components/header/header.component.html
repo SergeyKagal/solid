@@ -8,7 +8,12 @@
           [routerLink]="link.path"
           [queryParams]="link.param"
           [routerLinkActive]="'active'"
-          [routerLinkActiveOptions]="{ exact: true }"
+          [routerLinkActiveOptions]="{
+            paths: 'exact',
+            queryParams: 'ignored',
+            matrixParams: 'exact',
+            fragment: 'exact'
+          }"
           >{{ link.title }}</a
         >
       </li>
