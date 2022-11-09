@@ -38,7 +38,6 @@ export class NavigatorComponent implements OnInit, OnDestroy, DoCheck {
             Math.random() * 100 * 10 ** Math.round(Math.random() * 7)
           ),
         }));
-        console.log(this.transactions, this.currentRouteTab);
       },
     });
   }
