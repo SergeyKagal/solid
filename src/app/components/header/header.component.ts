@@ -1,6 +1,6 @@
 import { Component, DoCheck } from '@angular/core';
 import { headerLinks } from 'src/data/links';
-import { ILink } from 'src/types/link';
+import { ILink } from 'src/types/link.type';
 
 @Component({
   selector: 'app-header',

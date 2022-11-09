@@ -1,0 +1,17 @@
+.summary-wrapper {
+  width: 100vw;
+  height: calc(100vh - 56px);
+}
+.cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 750px;
+}
+a {
+  display: block;
+  width: 70%;
+  margin-left: auto;
+  margin-top: 2rem;
+}

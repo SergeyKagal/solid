@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ITransaction } from './types/transaction';
+import { ITransaction } from './types/transaction.type';
 
 @Injectable()
 export class HttpService {

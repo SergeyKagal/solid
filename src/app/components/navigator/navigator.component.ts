@@ -1,7 +1,7 @@
 import { Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
 import { HttpService } from '../../../http.service';
-import { ITransaction, transactionTypes } from 'src/types/transaction';
-import { ILink } from 'src/types/link';
+import { ITransaction, transactionTypes } from 'src/types/transaction.type';
+import { ILink } from 'src/types/link.type';
 import { navigatorLinks } from 'src/data/links';
 import { Event, NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';

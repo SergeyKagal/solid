@@ -5,5 +5,4 @@ export interface ILink {
   path: string;
   title: string;
   param: Params | null;
-  isActive: boolean;
 }
