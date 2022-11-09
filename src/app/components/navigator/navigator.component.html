@@ -11,4 +11,18 @@
       >
     </li>
   </ul>
+  <table class="table table-striped mx-auto border mt-4">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Account</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of transactions">
+        <td>{{ row.name.first }} {{ row.name.last }}</td>
+        <td>{{ row.amount | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
