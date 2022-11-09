@@ -1,8 +1,8 @@
 export enum transactionTypes {
-  income,
-  outcome,
-  loan,
-  investment,
+  'income',
+  'outcome',
+  'loan',
+  'investment',
 }
 
 export interface ITransaction {
