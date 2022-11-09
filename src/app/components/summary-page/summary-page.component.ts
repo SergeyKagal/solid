@@ -14,11 +14,13 @@ export class SummaryPageComponent implements OnInit, OnDestroy {
   cards: ICard[] = cards;
   allCardsNumbers: number = 0;
   subscription: Subscription;
+  isDataLoaded = false;
 
   constructor(private http: HttpService) {}
 
   ngOnInit(): void {
     this.subscription = this.http.getData().subscribe((transactions) => {
+      setTimeout(() => (this.isDataLoaded = true), 500); // - to show preloader
       this.allCardsNumbers = transactions.length;
       transactions.forEach((item) => {
         cards.map((card) => {

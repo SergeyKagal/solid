@@ -8,6 +8,7 @@ import { NavigatorComponent } from './components/navigator/navigator.component';
 import { HeaderComponent } from './components/header/header.component';
 import { routes } from 'src/data/routes';
 import { HttpClientModule } from '@angular/common/http';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     SummaryPageComponent,
     NavigatorComponent,
     HeaderComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
