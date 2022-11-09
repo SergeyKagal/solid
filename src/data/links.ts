@@ -10,7 +10,7 @@ export const headerLinks: ILink[] = [
   {
     id: 1,
     path: '/',
-    title: 'Summary page',
+    title: 'Summary',
     param: null,
   },
 ];
